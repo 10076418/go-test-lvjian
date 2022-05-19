@@ -19,14 +19,10 @@ import (
 	"github.com/spf13/viper"
 )
 
-var (
-	cfg = pflag.StringP("config", "c", "", "config file path")
-)
-
 func main() {
 	pflag.Parse()
 
-	pkg.Init(*cfg)
+	pkg.Init()
 
 	gin.SetMode(viper.GetString("run_mode"))
 

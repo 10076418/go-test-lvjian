@@ -28,21 +28,16 @@ type Config struct {
 	Redis *RedisConfig
 }
 
-func Init(cfgName string) {
-	setConfig(cfgName)
+func Init() {
+	setConfig()
 	Cfg = loadConfig()
 	initConfig(Cfg)
 	watchConfig()
 }
 
-func setConfig(cfgName string) {
-	if cfgName != "" {
-		viper.SetConfigFile(cfgName)
-	} else {
-		viper.AddConfigPath("conf")
-		viper.SetConfigName("config")
-	}
-
+func setConfig() {
+	viper.AddConfigPath("conf")
+	viper.SetConfigName("config")
 	if err := viper.ReadInConfig(); err != nil {
 		panic("viper.ReadInConfig error")
 	}
