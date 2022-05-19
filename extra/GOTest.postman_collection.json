@@ -1,0 +1,162 @@
+{
+	"info": {
+		"_postman_id": "ee04c2cd-dae0-428f-9493-8e8e407b86ab",
+		"name": "GO考試",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"FirstName\" : \"Baggio\",\r\n    \"LastName\":\"Roberrt\",\r\n    \"Email\":\"10076418@qq.com\",\r\n    \"Password\":\"123456789test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"signup"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "baggio",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "profile",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6IjEwMDc2NDE4QHFxLmNvbSIsIlBhc3N3b3JkIjoiMTIzNDU2Nzg5dGVzdCIsImV4cCI6MTY1Mjg2NDk1MywiaWF0IjoxNjUyODY0MzUzLCJuYmYiOjE2NTI4NjQzNTN9.gvrkcbqg5R78GAR6xT5D7OIpLDxjvnD_oMGh83EGwsc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/v1/profile",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "signin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Email\":\"10076418@qq.com\",\r\n    \"Password\":\"123456789test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/v1/signin",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6IjEwMDc2NDE4QHFxLmNvbSIsIlBhc3N3b3JkIjoiMTIzNDU2Nzg5dGVzdCIsImV4cCI6MTY1Mjg2ODMxNSwiaWF0IjoxNjUyODY3NzE1LCJuYmYiOjE2NTI4Njc3MTV9.v9dGteUgYX0TdZMJOKXk2lH4MxuokkWjI4wkxn615Tk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"FirstName\":\"lv\",\n    \"LastName\":\"jian\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/v1/profile/update",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"profile",
+						"update"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

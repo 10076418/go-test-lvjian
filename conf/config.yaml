@@ -1,0 +1,22 @@
+# gin config
+run_mode: debug
+addr: :8080
+name: gin-api
+url: http://127.0.0.1:8080
+max_ping_count: 10
+trechina_jwt: Rtg8BPKNEf2mB4mgvKONGPZZQSaJWNLijxR42qRgq0iBb5
+
+# mysql config
+db:
+  schema: GOTestDB
+  host: 127.0.0.1
+  port: 3306
+  username: root
+  password: root
+
+# redis config 
+redis:
+  host: 127.0.0.1:6379
+  index: 0
+  pool_size: 10
+  password: trechina
